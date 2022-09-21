@@ -43,7 +43,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
     setState(() {});
   }
 
-  bool get _collapsed => _height == 90;
+  bool get _collapsed => _height > 90 && _height < 150;
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
           slivers: [
             SliverAppBar(
               elevation: 0,
-              expandedHeight: 250,
+              expandedHeight: 300,
               backgroundColor: Colors.white,
               pinned: true,
               title: AnimatedOpacity(

@@ -6,12 +6,9 @@ import 'app/app.locator.dart';
 import 'app/app.router.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
   var style = const SystemUiOverlayStyle(statusBarColor: Colors.transparent);
   SystemChrome.setSystemUIOverlayStyle(style);
-
   setupLocator();
-
   runApp(const MyApp());
 }
 

@@ -94,16 +94,20 @@ class ItemDescription extends StatelessWidget {
                     borderRadius: k32pxBorderRadius,
                     child: Column(
                       children: [
-                        Text(
-                          'Delivery',
-                          style: kSubtitleTextStyle.copyWith(
-                              fontWeight: FontWeight.bold, fontSize: 12),
+                        Expanded(
+                          child: Text(
+                            'Delivery',
+                            style: kSubtitleTextStyle.copyWith(
+                                fontWeight: FontWeight.bold, fontSize: 12),
+                          ),
                         ),
-                        Text(
-                          r'45-55 min • $1.99',
-                          style: kSubtitleTextStyle.copyWith(
-                            fontSize: 11,
-                            color: Colors.grey,
+                        Expanded(
+                          child: Text(
+                            r'45-55 min • $1.99',
+                            style: kSubtitleTextStyle.copyWith(
+                              fontSize: 11,
+                              color: Colors.grey,
+                            ),
                           ),
                         ),
                       ],
