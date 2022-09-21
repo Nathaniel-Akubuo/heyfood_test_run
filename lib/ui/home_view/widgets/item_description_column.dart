@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:heyfood_test_run/widgets/buttons/custom_card.dart';
 
-import '../../../utilities/app_strings.dart';
+import '../../../utilities/app_values.dart';
 import '../../../utilities/ui_helpers.dart';
 
 class ItemDescription extends StatelessWidget {
@@ -42,7 +42,7 @@ class ItemDescription extends StatelessWidget {
               duration: const Duration(microseconds: 250),
               opacity: collapsed ? 0 : 1,
               child: Text(
-                AppStrings.leosBagels,
+                AppValues.leosBagels,
                 style: kAppBarTextStyle.copyWith(fontSize: 24),
               ),
             ),

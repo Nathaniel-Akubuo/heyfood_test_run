@@ -3,7 +3,7 @@ import 'package:heyfood_test_run/ui/home_view/widgets/background.dart';
 import 'package:heyfood_test_run/ui/home_view/widgets/custom_tab.dart';
 import 'package:heyfood_test_run/ui/home_view/widgets/item_description_column.dart';
 import 'package:heyfood_test_run/ui/home_view/widgets/tab_bar_view.dart';
-import 'package:heyfood_test_run/utilities/app_strings.dart';
+import 'package:heyfood_test_run/utilities/app_values.dart';
 import 'package:heyfood_test_run/utilities/ui_helpers.dart';
 import 'package:stacked/stacked.dart';
 import 'package:visibility_detector/visibility_detector.dart';
@@ -19,7 +19,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
-  var _height = 0.0;
+  var _height = 300.0;
   bool visible = false;
   final _duration = const Duration(milliseconds: 250);
   late ScrollController _controller;
@@ -43,7 +43,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
     setState(() {});
   }
 
-  bool get _collapsed => _height > 90 && _height < 150;
+  bool get _collapsed => _height < 150;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                 duration: _duration,
                 opacity: _collapsed ? 1 : 0,
                 child: Text(
-                  AppStrings.leosBagels,
+                  AppValues.leosBagels,
                   style: kAppBarTextStyle,
                 ),
               ),

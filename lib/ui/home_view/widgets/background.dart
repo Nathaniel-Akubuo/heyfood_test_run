@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import '../../../utilities/app_values.dart';
+
 class FlexibleSpaceBarBackground extends StatelessWidget {
   const FlexibleSpaceBarBackground({super.key});
 
@@ -22,7 +24,7 @@ class FlexibleSpaceBarBackground extends StatelessWidget {
           child: GoogleMap(
             zoomControlsEnabled: false,
             initialCameraPosition: CameraPosition(
-              target: LatLng(6.9657011, 3.5686053),
+              target: LatLng(AppValues.lat, AppValues.lng),
               zoom: 8,
             ),
           ),

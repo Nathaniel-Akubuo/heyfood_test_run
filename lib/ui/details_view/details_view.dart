@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:heyfood_test_run/utilities/app_strings.dart';
+import 'package:heyfood_test_run/utilities/app_values.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../utilities/ui_helpers.dart';
@@ -28,7 +28,7 @@ class DetailsView extends StatelessWidget {
                   child: GoogleMap(
                     zoomControlsEnabled: false,
                     initialCameraPosition: CameraPosition(
-                      target: LatLng(6.9657011, 3.5686053),
+                      target: LatLng(AppValues.lat, AppValues.lng),
                       zoom: 8,
                     ),
                   ),
@@ -39,7 +39,7 @@ class DetailsView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        AppStrings.leosBagels,
+                        AppValues.leosBagels,
                         style: kTitleTextStyle.copyWith(fontSize: 24),
                       ),
                       Wrap(
